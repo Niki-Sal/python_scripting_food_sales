@@ -59,6 +59,7 @@ def foodsale_date_save():
             for date in all_dates:
                 f.write(date)
                 f.write('\n')
+
 def foodsale_region_save():
     all_regions=[]
     with open('sampledatafoodsales.csv') as f:
@@ -86,6 +87,11 @@ def foodsale_city_save():
             for city in all_cities:
                 f.write(city)
                 f.write('\n')
+# getting user iput and save
+def write_input_to_file():
+    user_input = input('Hello, enter your name:\n')
+    with open('name.txt', 'w')as f:
+        f.write(user_input)
 
 if __name__ == '__main__':
     # read_only()
@@ -94,4 +100,5 @@ if __name__ == '__main__':
     # append_text()
     # foodsale_date_save()
     # foodsale_region_save()
-    foodsale_city_save()
+    # foodsale_city_save()
+    write_input_to_file()
